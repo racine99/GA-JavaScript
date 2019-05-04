@@ -26,26 +26,47 @@
 <script>
 
 
-/*  ----- Homework #1 ------------- */
+/*  ----- Homework #1 ------------- 
        for (num = 100; num > 1; num--) {
        console.log(num + ' bottles of beer on the wall, ' + num + ' bottles of beer. Take one down and pass it around, ' + (num-1) + ' bottles of beer on the wall.');
         }
         if  (num == 1)  { 
         console.log(num + ' bottle of beer on the wall, ' + num + ' bottle of beer. Take one down and pass it around, ' + (num-1) + ' bottles of beer on the wall.');
-          }   
+          }   */
 
-/*  ----- Homework #2 -------------
+/*  ----- Homework #2 ------------- */
 let streetNumber = [1,2,3,4,5,6,7,8,9,10]
-let streetName = ['West End Avenue', '3rd Street', 'Hudson St']
+let streetName = ['West End Avenue', 'East 3rd Street', 'Hudson St']
 let city = ['New York', 'Mississippi', 'Boston', 'Dallas', 'Miami', 'Los Vegas']
 let state = ['NJ', 'NY', 'MA', 'MS', 'FL', 'WA']
 let zip = [10003, 10025, 10105, 07030, 10014]
 
-let randomZip = _.sample(zip)[0];
-console.log(randomZip)
- */
+//let randomZip = _.sample(zip)[0];
+//console.log(randomZip);
+
+
+
+var randomIndex = Math.floor(Math.random() * streetNumber.length); 
+var randomStreetNumber = streetNumber[randomIndex];
+
+var randomIndex = Math.floor(Math.random() * streetName.length); 
+var randomStreetName = streetName[randomIndex];
+
+var randomIndex = Math.floor(Math.random() * city.length); 
+var randomCity = city[randomIndex];
+
+var randomIndex = Math.floor(Math.random() * state.length); 
+var randomState = state[randomIndex];
+
+var randomIndex = Math.floor(Math.random() * zip.length); 
+var randomZip = zip[randomIndex];
+
+
+console.log(`${randomStreetNumber} ${randomStreetName}, ${randomCity}, ${randomState}, ${randomZip}`);
+
 
 </script>
+
 https://stackoverflow.com/questions/5836833/create-a-array-with-random-values-in-javascript
 
 </body>
