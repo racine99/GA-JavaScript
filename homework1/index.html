@@ -18,56 +18,87 @@
 </head>
 <body>
   
-  <H1>Hello this is my homework.</H1><br /><br />
+  <h1>Hello. I am ../racine</h1>
+  <h2>This is my homework #1 for JS class.</h2>
 
-  <h2>This is homework #1: 100 Bottles of beer on the wall.</h2>
+  <ul>
+  <li>This is homework #1: 100 Bottles of beer on the wall.</li>
+  <li>This is homework #2: Random address generator</li>
+  <li>Please review in the console...</li>
+</ol>
 
 
 <script>
 
+//  ----- Homework #1 ------------- 
+console.log(`.
+.
+.
+100 Bottles of Beer on the Wall
+.
+.`)
 
-/*  ----- Homework #1 ------------- 
-       for (num = 100; num > 1; num--) {
+for (num = 100; num > 1; num--) {
        console.log(num + ' bottles of beer on the wall, ' + num + ' bottles of beer. Take one down and pass it around, ' + (num-1) + ' bottles of beer on the wall.');
         }
         if  (num == 1)  { 
         console.log(num + ' bottle of beer on the wall, ' + num + ' bottle of beer. Take one down and pass it around, ' + (num-1) + ' bottles of beer on the wall.');
-          }   */
+          }   
 
-/*  ----- Homework #2 ------------- */
-let streetNumber = [1,2,3,4,5,6,7,8,9,10]
-let streetName = ['West End Avenue', 'East 3rd Street', 'Hudson St']
-let city = ['New York', 'Mississippi', 'Boston', 'Dallas', 'Miami', 'Los Vegas']
-let state = ['NJ', 'NY', 'MA', 'MS', 'FL', 'WA']
-let zip = [10003, 10025, 10105, 07030, 10014]
-
-//let randomZip = _.sample(zip)[0];
-//console.log(randomZip);
+          console.log(`.
+.
+.
+Random address generator
+.
+.`)
 
 
+//  ----- Homework #2 ------------- */
 
-var randomIndex = Math.floor(Math.random() * streetNumber.length); 
-var randomStreetNumber = streetNumber[randomIndex];
+// Street Number ++++++++++++++++++++++++++++++++++++++++++
+function getRandomArbitrary(min, max) {
+  return Math.ceil(Math.random() * (max - min) + min);
+};
+let streetNum = getRandomArbitrary(1, 999);
+console.log(`Street number is ${streetNum}`)
 
-var randomIndex = Math.floor(Math.random() * streetName.length); 
-var randomStreetName = streetName[randomIndex];
+// Street Name ++++++++++++++++++++++++++++++++++++++++++++++
+let streetName = ['West End Avenue', 'East 3rd Street', 'Hudson St', 'Inverness Drive', 'Devon Court', 'Sycamore Drive', 'Manor Drive', 'York Street', 'Howard Street', 'Locust Lane', 'Bridge Street', 'Park Avenue', 'Cottage Street', 'Jefferson Street', 'Durham Court', '6th Street North', 'Magnolia Court', '3rd Street North', 'Olive Street', 'Linden Avenue', 'Rose Street', 'Mechanic Street', 'Summer Street', 'Valley Road', 'Ivy Lane', 'Canal Street', 'North Avenue', 'Hudson Street', 'Cooper Street', 'State Street East', 'Edgewood Road', 'Orchard Street', 'Cherry Lane', 'Front Street South', 'Division Street', 'Ridge Avenue', 'Hickory Street', 'Spring Street', 'Main Street East', 'Prospect Street', 'Maple Avenue', 'Orange Street', '5th Avenue', 'Valley View Drive', 'Mulberry Lane', '4th Street', 'Amherst Street', 'Fairway Drive', 'Lakeview Drive', '2nd Street West', 'Lafayette Avenue', 'Fairview Avenue', 'Madison Street', '9th Street', 'Church Road', 'Fairview Road', 'Queen Street', 'Heather Lane', 'Briarwood Drive', 'Route 202', 'Grant Avenue', 'George Street', 'Route 30', 'West Street', 'Grove Street', '7th Avenue', 'Park Place', 'Virginia Avenue', 'Grove Avenue', 'Windsor Court', 'Evergreen Drive', 'Monroe Street', 'Lexington Court', 'Monroe Drive', 'Atlantic Avenue', 'College Avenue', 'Mulberry Court', 'Circle Drive', 'James Street', 'Railroad Street', 'Cemetery Road', 'Lilac Lane', 'Cambridge Road', 'Route 1', 'Highland Avenue', 'Delaware Avenue', '14th Street', 'Schoolhouse Lane', 'Redwood Drive', 'Colonial Avenue', 'Hillcrest Avenue', 'Route 6', '4th Street South', 'Country Lane', 'Sunset Drive', 'Main Street North', 'Elizabeth Street', 'Glenwood Avenue', 'Creekside Drive', 'Canterbury Drive', 'Penn Street', '7th Street', 'Willow Drive']
 
-var randomIndex = Math.floor(Math.random() * city.length); 
-var randomCity = city[randomIndex];
+let street = Math.floor(Math.random() * streetName.length); 
+let randomStreetName = streetName[street];
 
-var randomIndex = Math.floor(Math.random() * state.length); 
-var randomState = state[randomIndex];
+console.log(`Street name is ${randomStreetName}`)
 
-var randomIndex = Math.floor(Math.random() * zip.length); 
-var randomZip = zip[randomIndex];
+// City ++++++++++++++++++++++++++++++++++++++++++++++
+let cityName = ['Folsom', 'Largo', 'Berkeley', 'Napa', 'Sunrise', 'Pembroke Pines', 'Trenton', 'Pueblo', 'Racine', 'Auburn', 'Austin', 'Waukegan', 'Brooklyn Park', 'Renton', 'Oklahoma City', 'Augusta', 'Springfield', 'Bakersfield', 'Lake Charles', 'Schaumburg', 'Clarksville', 'Miami', 'Green Bay', 'Sioux Falls', 'Greeley', 'Visalia', 'Arlington', 'Davenport', 'Round Rock', 'Sunnyvale', 'Upland', 'Syracuse', 'Tampa', 'San Mateo', 'Lewisville', 'Pompano Beach', 'Santa Fe', 'San Ramon', 'Stockton', 'Livonia', 'San Diego', 'Las Vegas', 'Carmel', 'Greensboro', 'Miramar', 'Eugene', 'Hillsboro', 'Modesto', 'Concord', 'Tucson', 'Norwalk', 'Kalamazoo', 'Rockford', 'Rock Hill', 'Sioux City', 'Champaign', 'Gilbert', 'Wichita', 'Chino Hills', 'Moreno Valley', 'San Marcos', 'Garland', 'Hialeah', 'Baytown', 'Independence', 'Montgomery', 'Kennewick', 'Thousand Oaks', 'Chandler', 'Centennial', 'Davie', 'Seattle', 'Plymouth', 'Rio Rancho', 'Reading', 'Mesa', 'Deltona', 'Portland', 'Springfield', 'Louisville', 'Little Rock', 'South Bend', 'Portland', 'Hartford', 'Charlotte', 'Wilmington', 'Plantation', 'Redding', 'Abilene', 'Flint', 'Avondale', 'Hayward', 'Fort Worth', 'Glendale', 'Asheville', 'Layton', 'Pearland', 'Erie', 'Joliet', 'Tracy', 'Johns Creek', 'Jacksonville', 'Des Moines', 'Southfield', 'Allentown', 'Mount Vernon', 'Lakeland', 'Elk Grove', 'Peoria', 'Roanoke', 'Miami Gardens', 'Athens', 'Sacramento', 'Raleigh', 'Simi Valley', 'Knoxville', 'St. George', 'Mountain View', 'Denver', 'Kent', 'Cedar Rapids', 'Inglewood', 'Boynton Beach', 'Grand Rapids', 'Rancho Cucamonga', 'Albuquerque', 'Edmond', 'Nashua', 'Norman', 'Billings', 'Evansville', 'Springfield', 'Sugar Land', 'Worcester', 'Aurora', 'Federal Way', 'Santa Monica', 'Gary', 'Bellingham', 'Bellevue', 'New York', 'Troy', 'Santa Barbara', 'Newport Beach', 'Mesquite', 'Detroit', 'Lawrence', 'San Buenaventura (Ventura)', 'New Haven', 'Frisco', 'Topeka', 'Menifee', 'Savannah', 'Yonkers', 'Palmdale', 'Deerfield Beach', 'Broken Arrow', 'Wichita Falls', 'Waco', 'Chula Vista', 'Alhambra', 'Wilmington', 'Henderson', 'Overland Park', 'Long Beach', 'Hollywood', 'Rialto', 'Dearborn', 'Oakland', 'St. Louis', 'Riverside', 'Scranton', 'Cicero', 'Peoria', 'Mobile', 'Lakewood', 'Clovis', 'Waterloo', 'New Bedford', 'Bridgeport', 'Lynwood', 'Escondido', 'Fort Lauderdale', 'Greenville', 'Fullerton', 'Vallejo', 'Bloomington', 'Fremont', 'Midland', 'Plano', 'Lake Forest', 'Redondo Beach', 'Concord', 'Roseville', 'Tyler', 'Buffalo', 'Lawton', 'Schenectady', 'Laredo', 'North Charleston', 'Glendale', 'Pleasanton', 'Muncie', 'West Valley City', 'Clifton', 'Perris', 'Lowell', 'Bethlehem', 'Albany', 'Murfreesboro', 'Killeen', 'Richmond', 'Tulsa', 'Garden Grove', 'Santa Clarita', 'Jacksonville', 'Whittier', 'Lansing', 'Carrollton', 'Fort Wayne', 'Lakewood', 'Macon', 'Salt Lake City', 'San Bernardino', 'Gainesville', 'Los Angeles', 'Chino', 'Canton', 'Fargo', 'Longview', 'Sparks', 'Indianapolis', 'Charleston', 'Newark', 'Amarillo', 'Tuscaloosa', 'Columbus', 'Victorville', 'Waukesha', 'Rapid City', 'Surprise', 'Arlington Heights', 'Rochester', 'El Paso', 'Evanston', 'Milwaukee', 'Turlock', 'Suffolk', 'Scottsdale', 'Toledo', 'Fallon', 'Santa Rosa', 'Chattanooga', 'Hemet', 'Gresham', 'Bryan', 'Tacoma', 'Buena Park', 'Palm Bay', 'Boulder', 'Alexandria', 'Antioch', 'Lynn', 'Lee\'s Summit', 'Duluth', 'Everett', 'St. Paul', 'Roswell', 'Chesapeake', 'Livermore', 'Carlsbad', 'Pittsburgh', 'Grand Prairie', 'Allen', 'Fort Collins', 'Anaheim', 'Pomona', 'Boca Raton', 'Philadelphia', 'Danbury', 'Mount Pleasant', 'Spokane Valley', 'Honolulu', 'Missouri City', 'Washington', 'San Angelo', 'Tustin', 'Parma', 'Warwick', 'Phoenix', 'West Jordan', 'Milpitas', 'Colorado Springs', 'Port St. Lucie', 'Bolingbrook', 'Huntington Beach', 'St. Petersburg', 'Warren', 'Fontana', 'New Rochelle', 'Fall River', 'St. Joseph', 'Elgin', 'Medford', 'Union City', 'Temecula', 'Corpus Christi', 'McAllen', 'Lubbock', 'Westland', 'Chicago', 'Torrance', 'Kansas City', 'Gulfport', 'Lafayette', 'Aurora', 'Lynchburg', 'Omaha', 'Quincy', 'Albany', 'Farmington Hills', 'Loveland', 'Hawthorne', 'Irving', 'Tempe', 'Yakima', 'Coral Springs', 'Ann Arbor', 'Stamford', 'Norwalk', 'Yuma', 'Salem', 'El Monte', 'Pharr', 'West Covina', 'Santa Clara', 'Odessa', 'North Las Vegas', 'Baldwin Park', 'Thornton', 'Salinas', 'Longmont', 'Baltimore', 'Vista', 'South Gate', 'Huntsville', 'Birmingham', 'Hoover', 'Daly City', 'Naperville', 'Lauderhill', 'New Orleans', 'Cranston', 'Lafayette', 'Iowa City', 'Cambridge', 'Las Cruces', 'Beaumont', 'Brockton', 'Denton', 'Orem', 'Baton Rouge', 'Ogden', 'Anchorage', 'Kenosha', 'Corona', 'Redwood City', 'Merced', 'Compton', 'Union City', 'Sandy Springs', 'Vancouver', 'Newton', 'Lexington', 'Provo', 'Charleston', 'Edinburg', 'Cleveland', 'Pawtucket', 'Lancaster', 'Irvine', 'Brownsville', 'Reno', 'Memphis', 'Oceanside', 'Bend', 'League City', 'Columbia', 'Columbia', 'Orlando', 'Melbourne', 'Clearwater', 'Springdale', 'Manteca', 'Meridian', 'Murrieta', 'Nashville', 'Palatine', 'College Station', 'Richardson', 'Bloomington', 'Akron', 'Bellflower', 'Sterling Heights', 'Dayton', 'Providence', 'Alameda', 'Orange', 'Newport News', 'Dallas', 'Boston', 'Waterbury', 'High Point', 'Jersey City', 'Cary', 'Norfolk', 'Westminster', 'San Jose', 'Madison', 'Fayetteville', 'Warner Robins', 'Camden', 'Somerville', 'Chico', 'McKinney', 'Wyoming', 'Richmond', 'Hammond', 'Kenner', 'Virginia Beach', 'San Antonio', 'Jonesboro', 'Miami Beach', 'Fishers', 'Manchester', 'Paterson', 'Rochester Hills', 'Winston-Salem', 'El Cajon', 'Palm Coast', 'Shreveport', 'Burlington', 'Tallahassee', 'Spokane', 'Missoula', 'Burbank', 'Cincinnati', 'Fresno', 'Houston', 'Hesperia', 'Cheyenne', 'Santa Ana', 'Rochester', 'Hampton', 'San Leandro', 'Appleton', 'Olathe', 'Passaic', 'Atlanta', 'Redlands', 'Citrus Heights', 'Cape Coral', 'Santa Maria', 'Pasadena', 'Portsmouth', 'Apple Valley', 'Carson', 'Kansas City', 'Gastonia', 'Lincoln', 'Minneapolis', 'Fort Smith', 'Arvada', 'Decatur', 'Elizabeth', 'Vacaville', 'Costa Mesa', 'Lawrence', 'Fairfield', 'Sandy', 'San Francisco', 'West Palm Beach', 'Boise City', 'Westminster', 'Beaverton', 'Downey', 'Jackson', 'Nampa', 'Oxnard', 'Pasadena', 'Mission Viejo', 'Indio', 'Bloomington', 'Youngstown', 'Fayetteville', 'Durham', 'Columbus', 'New Britain', 'Mission', 'Ontario']
+let city = Math.floor(Math.random() * cityName.length); 
+let randomCityName = cityName[city];
 
+console.log(`City is ${randomCityName}`)
 
-console.log(`${randomStreetNumber} ${randomStreetName}, ${randomCity}, ${randomState}, ${randomZip}`);
+// State ++++++++++++++++++++++++++++++++++++++++++++++
+let stateName = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+var state = Math.floor(Math.random() * stateName.length); 
+var randomStateName = stateName[state];
+
+console.log(`State is ${randomStateName}`)
+
+// Zip ++++++++++++++++++++++++++++++++++++++++++++++
+let zip = (""+Math.random()).substring(2, 7);
+
+console.log(`Zip is ${zip}`)
+
+// Complete random street address
+
+console.log(`.
+.
+.
+The random address is
+${streetNum} ${randomStreetName}, ${randomCityName}, ${randomStateName} ${zip}`)
 
 
 </script>
-
-https://stackoverflow.com/questions/5836833/create-a-array-with-random-values-in-javascript
 
 </body>
 </html>
